@@ -23,11 +23,11 @@
   ansible.builtin.command: npm install 
   args:
     chdir:  /app 
-
-- name: load schema
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: load-mango-schema
+# we are doing this part of MongoDB itself
+# - name: load schema
+#   ansible.builtin.import_role:
+#     name: common
+#     tasks_from: load-mango-schema
 
 - name: Start Application
   ansible.builtin.import_role:
