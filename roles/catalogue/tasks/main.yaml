@@ -3,6 +3,11 @@
 # common is another role 
 # we need to import a task nodejs.yaml into catalogue 
 
+
+- name: print app version
+  debug: 
+    msg: "APP  version is  : {{app_version}}"
+
 - name: Install Nodejs
   ansible.builtin.import_role:
     name: common
